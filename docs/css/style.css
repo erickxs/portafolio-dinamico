@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background: #f4f4f4;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+img {
+    border-radius: .625rem;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/*=======================
+HEADER
+=======================*/
+
+
+/* --- --- 2.5rem = 40px basado en 1rem = 16px --- --- */
+
+
+.header {
+    padding: 2.5rem 0;
+}
+
+.header .logo {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 1.3rem;
+}
+
+.header .logo p {
+   text-align: center;
+   color: #a0a0a0;
+   font-size: 1.1rem; 
+}
+
+.header .search-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+}
+
+.header .search-bar {
+    width: 70%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    background: #ffffff;
+    padding: 0 1.25rem;
+    border-radius: 6.25rem;
+    border: none;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.header .categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.header .categories a {
+    color: #a0a0a0;
+    margin: .625rem 1.25rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.header .categories a.active {
+    color: #000000;
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+/*========================
+GRID
+========================*/
+
+.grid {
+    position: relative;
+    width: 100%;
+    opacity: 0;
+    transition: opacity .5s linear 1s;
+}
+
+.grid.loaded-images {
+    opacity: 1;
+}
+
+.grid .item {
+    position: absolute;
+    display: block;
+    padding: 0;
+    margin: 10px;
+    width: calc(33.333333% - 20px);
+}
+
+.grid .item-content {
+    position: relative;
+}
+
+.grid .item .item-content img {
+    width: 100%;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+.grid .item .item-content:hover img {
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+}
+
+/*========================
+OVERLAY
+========================*/
+
+.overlay {
+    position: fixed;
+    background: rgba(0,0,0,.9);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: display .5s linear 1s;
+}
+
+.overlay.active {
+    display: flex;
+    z-index: 1000;
+}
+
+.overlay img {
+    max-width: 100%;
+}
+
+.overlay .description {
+    display: block;
+    background: #ffffff;
+    padding: 1.25rem;
+    text-align: center;
+    margin-top: .3125rem;
+    border-radius: .625rem;
+    max-width: 50%;
+}
+
+.container-img {
+    position: relative;
+}
+
+.overlay #btn-close-popup {
+    background: none;
+    font-size: 1.25rem;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    position: absolute;
+    right: -1.25rem;
+    top: -1.25rem;
+}
+
+
+/*=======================
+FOOTER
+=======================*/
+
+footer .social {
+    display: flex;
+    align-content: center;
+    justify-content: center;;
+    flex-wrap: wrap;
+    padding: 1.25rem;
+}
+
+footer .social a {
+    display: block;
+    width: 3.75rem;
+    height: 3.75rem;
+    background: #000000;
+    color: #ffffff;
+    margin: 1.25rem;
+    text-align: center;
+    border-radius: 6.25rem;
+    transition: all .3s ease;
+    font-size: 1.25rem;
+    line-height: 3.75rem;
+}
+
+footer .social .twitter {
+    background: #1da1f2;
+}
+footer .social .github {
+    background: #6e5494;
+}
+footer .social .youtube {
+    background: #ff0000;
+}
+
+footer .icon-container:hover a {
+    animation: icon .5s ease;
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+}
+
+
+footer .copy {
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-size: .9rem;
+    color: #a0a0a0;
+}
+
+footer .copy a {
+    color: #a0a0a0;
+}
+
+footer .copy a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+
+
+/*=============================
+MEDIA QUERYS
+=============================*/
+
+@media screen and (max-width: 768px) {
+    .header .search-bar {
+        width: 100%;
+    }
+    .grid .item {
+        width: calc(50% - 20px);
+    }
+}
+
+
+/*==============================
+FORKME BUTTON
+==============================*/
+
+.fork-me-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.fork-me-container a {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+@keyframes icon {
+    from {
+        transform: rotate3d(0,0,0,0);
+    }
+
+    to {
+        transform: rotate3d(0,0,1,360deg);
+    }
+}

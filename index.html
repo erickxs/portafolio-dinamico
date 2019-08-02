@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3cb10f324e.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Portafolio</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <h1>Erick De Leon</h1>
+                <p>Desarrollador Web</p>
+            </div>
+            <form action="" class="search-form">
+                <input type="text" class="search-bar" id="search-bar" placeholder="Buscar...">
+            </form>
+            <div class="categories" id="categories">
+                <a href="#" data-category="todos" class="active">TODOS</a>         
+                <a href="#" data-category="html">HTML</a>         
+                <a href="#" data-category="css">CSS</a>         
+                <a href="#" data-category="javascript">JAVASCRIPT</a>
+                <a href="#" data-category="php">PHP</a>        
+                <a href="#" data-category="mysql">MYSQL</a>        
+            </div>
+        </header>
+        
+        <section class="grid" id="grid">
+            <div class="item" 
+                data-category="html" 
+                data-tags="html markup frontend edificios" 
+                data-description="1.- Lorem ipsum dolor sit amet">
+                <div class="item-content">
+                    <img src="img/html1.png" alt="html 1">
+                </div>
+            </div>
+            <div class="item" 
+                data-category="css" 
+                data-tags="css cascade stylesheet css3"
+                data-description="2.- Lorem ipsum dolor sit amet">
+                <div class="item-content">
+                    <img src="img/css1.png" alt="css 1">
+                </div>
+            </div>
+            <div class="item" 
+                data-category="javascript" 
+                data-tags="javascript js programacion algoritmos desarrollo" 
+                data-description="3.- Lorem ipsum dolor sit amet">
+                <div class="item-content">
+                    <img src="img/javascript1.png" alt="javascript 1">
+                </div>
+            </div>
+            <div class="item" 
+                data-category="php" 
+                data-tags="php programacion validaciones backend" 
+                data-description="4.- Lorem ipsum dolor sit amet">
+                <div class="item-content">
+                    <img src="img/php1.png" alt="php 1">
+                </div>
+            </div>
+            <div class="item" 
+                data-category="php" 
+                data-tags="php programacion validaciones backend" 
+                data-description="5.- Lorem ipsum dolor sit amet">
+                <div class="item-content">
+                    <img src="img/php2.png" alt="php 2">
+                </div>
+            </div>
+            <div class="item" 
+                data-category="css" 
+                data-tags="css cascade stylesheet css3" 
+                data-description="6.- Lorem ipsum dolor sit amet">
+                <div class="item-content">
+                    <img src="img/css2.png" alt="css 2">
+                </div>
+            </div>
+            <div class="item" 
+                data-category="javascript" 
+                data-tags="javascript js programacion algoritmos desarrollo" 
+                data-description="7.- Lorem ipsum dolor sit amet">
+                <div class="item-content">
+                    <img src="img/javascript2.png" alt="javascript 2">
+                </div>
+            </div>
+            <div class="item" 
+                data-category="html" 
+                data-tags="html markup frontend" 
+                data-description="8.- Lorem ipsum dolor sit amet">
+                <div class="item-content">
+                    <img src="img/html2.png" alt="html 2">
+                </div>
+            </div>
+            <div class="item" 
+                data-category="mysql" 
+                data-tags="mysql base de datos database" 
+                data-description="8.- Lorem ipsum dolor sit amet">
+                <div class="item-content">
+                    <img src="img/mysql.png" alt="mysql">
+                </div>
+            </div>
+        </section>
+
+        <section class="overlay" id="overlay">
+            <div class="container-img">
+                <button id="btn-close-popup"><i class="fas fa-times"></i></button>
+                <img src="" alt="">
+            </div>
+            <p class="description"></p>
+        </section>
+
+        <footer class="container">
+            <div class="social">
+                <div class="icon-container"><a href="https://twitter.com/erickdl_xs" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a></div>
+                <div class="icon-container"><a href="https://github.com/erickxs" target="_blank" class="github"><i class="fab fa-github"></i></a></div>
+                <div class="icon-container"><a href="https://youtube.com/erickls" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a></div>
+            </div>
+            <div class="copy">
+                <p><i class="far fa-copyright"></i> 2019 <a href="https://erickdeleon.site" target="_blank">Erick De León</a></p>
+            </div>
+        </footer>
+    </div>
+
+    <div class="fork-me-container">
+        <a href="https://github.com/erickxs/portafolio-dinamico"><img width="149" height="149" src="img/forkme_right_darkblue.png" class="attachment-full size-full" alt="Fork me on GitHub"></a>
+    </div>
+
+    
+
+    <script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
+    <script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
