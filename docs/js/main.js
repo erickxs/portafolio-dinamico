@@ -17,7 +17,7 @@ window.addEventListener('load', () => {
            
             const category = e.target.dataset.category;
            
-            category === 'todos' ? grid.filter('[data-category]') : grid.filter(`[data-category="${category}"]`);
+            category === 'all' ? grid.filter('[data-category]') : grid.filter(`[data-category="${category}"]`);
         })
     })
 
